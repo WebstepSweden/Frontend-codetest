@@ -2,19 +2,19 @@
 
 Welcome to Websteps frontend code test!
 
-In this code test, we want you to build a small trivia game, in order to get a sence of you coding skills as well as your UX skills.
+In this code test, we want you to build a small trivia game, in order to get a sense of your coding and UX skills.
 
-The test is supposed to take around 4 hours and you pick the any UI framework that you are comfortable with, but preferably nothing to unknown.
+The test is supposed to take around 4 hours and you choose freely in frameworks and libraries.
 
 User stories to complete:
 - As a user, I should be able to create a quiz
 - As a user, I should be able to answer a question
-- As a user, when I selected an answer, I should see if my answer was the correct one
+- As a user, when I selected a answer, I should see if my answer was the correct
 - As a user, I should see how many correct answers I have selected in the quiz
 
 
 ### API
-Integrate twoards the trivia api, https://opentdb.com/api_config.php
+Integrate towards the trivia api, https://opentdb.com/api_config.php
 
 ### Criteria:
 - The application should contain at least two pages, one form page and one quiz page where the questions are answered 
@@ -28,5 +28,6 @@ Here is a gif for inspiration for the app. It's a plus if make your own design, 
 
 ## Sending in the test
 The code test shall be submitted to marcus.stamstrom@webstep.se, at latest 24h before the interview. Please create a github repo for the code and share that link.
+
 
 ## Happy coding!
