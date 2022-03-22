@@ -8,7 +8,7 @@ The test is supposed to take around 2 hours.
 
 User stories to complete:
 
-- Given a user creates a quiz, when I answer a question, then I should see if my answer was correct and how many correct answers I made
+- Given a user creates a quiz, when I answer a question, then I should see if my answer was correct and how many correct answers I've made
 
 ### Inspiration
 
