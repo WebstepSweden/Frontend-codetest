@@ -12,9 +12,8 @@ Tasks to complete:
 - User should see a summary page
 - If time, add automated tests
 
-## Sending in the test
+## Send in the test as a pull request
 
-The test should be submitted as a Pull request to the repo
   
 ## Current design
 ![Trivia app](https://user-images.githubusercontent.com/6728401/156407576-55991df2-89a0-4bbd-9a53-3d78826cc143.gif)
