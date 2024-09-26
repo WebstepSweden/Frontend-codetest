@@ -6,16 +6,20 @@ interface AnswerOptionsProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
   getAnswerStyles: (answer: string) => CSSProperties;
   onClick: (answer: string) => void;
 }
+
 export const AnswerOptions = ({ answers, getAnswerStyles, onClick, ...buttonProps }: AnswerOptionsProps) => {
   return (
     <>
       {answers.map((answer, i) => {
         const answerStyles = getAnswerStyles(answer);
         return (
-          <button key={i} className={styles.btn} style={answerStyles} onClick={() => onClick(answer)} {...buttonProps} >
-            <div className={styles.answerNumber}>{i + 1}</div>
-            <div className={styles.answerOption}>{answer}</div>
-          </button>
+          <div className={styles.btnContainer} style={answerStyles}>
+            <div className={styles.answerNumber} >{i + 1}</div>
+            <button
+              key={i} className={styles.btn} onClick={() => onClick(answer)} {...buttonProps}  >
+              {answer}
+            </button>
+          </div>
         );
       })
       }
