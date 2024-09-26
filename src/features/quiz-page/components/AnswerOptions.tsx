@@ -13,10 +13,10 @@ export const AnswerOptions = ({ answers, getAnswerStyles, onClick, ...buttonProp
       {answers.map((answer, i) => {
         const answerStyles = getAnswerStyles(answer);
         return (
-          <div className={styles.btnContainer} style={answerStyles}>
+          <div key={i} className={styles.btnContainer} style={answerStyles} >
             <div className={styles.answerNumber} >{i + 1}</div>
             <button
-              key={i} className={styles.btn} onClick={() => onClick(answer)} {...buttonProps}  >
+              className={styles.btn} onClick={() => onClick(answer)} {...buttonProps}  >
               {answer}
             </button>
           </div>
