@@ -1,15 +1,17 @@
 import { Category } from "./categoriesRequest";
 
+export interface EncodedQuizQuestion {
+  category: string;
+  type: string;
+  difficulty: string;
+  question: string;
+  correct_answer: string;
+  incorrect_answers: string[];
+}
+
 interface ApiQuizResponse {
   responseCode: number;
-  results: Array<{
-    category: string;
-    type: string;
-    difficulty: string;
-    question: string;
-    correct_answer: string;
-    incorrect_answers: string[];
-  }>;
+  results: EncodedQuizQuestion[];
 }
 
 export const createQuiz = async (

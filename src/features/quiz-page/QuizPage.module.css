@@ -1,0 +1,9 @@
+.progressContainer {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.progressItem {
+  width: 120px;
+}

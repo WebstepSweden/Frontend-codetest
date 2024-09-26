@@ -6,10 +6,13 @@ import {
 } from "../../common/requests/categoriesRequest";
 import { Spinner } from "../../common/components/Spinner";
 import { QuizForm } from "./QuizForm";
+import { useNavigate } from "react-router-dom";
+import { decodeQuizQuestions } from "../../common/requests/utils/decodeQuizQuestions";
 
 export const QuizFormPage = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCategories().then((categoryResponse) => {
@@ -18,14 +21,15 @@ export const QuizFormPage = () => {
     });
   }, []);
 
-  const fetchQuiz = async (
-    amount: number,
+  const onSubmitQuiz = async (amount: number,
     difficulty: string | undefined,
-    category: Category | undefined
-  ) => {
-    const quizQuestions = await createQuiz(amount, difficulty, category);
-    console.log(quizQuestions);
+    category: Category | undefined) => {
+    const encodedQuizQuestions = await createQuiz(amount, difficulty, category);
+
+    const decodedQuizQuestions = decodeQuizQuestions(encodedQuizQuestions.results);
+    navigate("/quiz", { state: { quizQuestions: decodedQuizQuestions } });
   };
+
 
   return (
     <div>
@@ -33,7 +37,7 @@ export const QuizFormPage = () => {
       {isLoading ? (
         <Spinner />
       ) : (
-        <QuizForm categories={categories} submit={fetchQuiz} />
+        <QuizForm categories={categories} submit={onSubmitQuiz} />
       )}
     </div>
   );
