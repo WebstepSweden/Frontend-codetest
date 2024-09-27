@@ -31,10 +31,11 @@ export const QuizPage = () => {
     const isCorrect = correctAnswer === answerOption;
 
     if (isSelected) style.backgroundColor = "#a7a3a3";
-    if (isAnswered) {
-      style.borderColor = isCorrect ? "#59b841" : (isSelected ? "red" : undefined);
+    if (isAnswered && isCorrect) {
+      style.borderColor = "#59b841";
+    } else if (isAnswered && isSelected) {
+      style.borderColor = "red";
     }
-
     return style;
   };
 
