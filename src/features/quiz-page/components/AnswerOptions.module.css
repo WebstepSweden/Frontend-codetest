@@ -1,0 +1,43 @@
+.btnContainer {
+  max-width: 900px;
+  display: flex;
+  margin-bottom: 12px;
+  border: 3px solid #007bff;
+}
+
+.btn {
+  color: black;
+  text-align: start;
+  width: 100%;
+  font-size: 20px;
+  padding: 0px;
+  padding-left: 12px;
+  margin: 0px;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+}
+
+.btnContainer:hover {
+  background-color: #a7a3a3;
+}
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn:hover {
+  background-color: #a7a3a3;
+}
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.answerNumber {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  background-color: #007bff;
+  color: #fff;
+  align-items: center;
+}

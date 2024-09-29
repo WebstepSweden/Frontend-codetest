@@ -1,0 +1,29 @@
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.container {
+  margin: 20px 0px;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
+.quizItem {
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
